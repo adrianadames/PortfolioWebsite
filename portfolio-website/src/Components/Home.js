@@ -46,22 +46,24 @@ const Main = styled.main`
     left:0px;
 `;
 
-
 const TopSection = styled.section`
     width:100%;
     border: 2px solid pink;
-    min-height: 100vh;
+    height: 100vh;
+    min-height:800px;
 `;
 
 const Img = styled.img`
     width:100%;
+    height:100%;
+    object-fit: cover;
     z-index: -1;
 `;
 
 const BottomSection = styled.section`
     width:100%;
     border: 2px solid orange;
-    min-height: 100vh;
+    height: 100vh;
 `;
 
 
@@ -84,7 +86,7 @@ function Home() {
                         <Img src = {headshot}  />
                     </TopSection>
                     <BottomSection>
-                        BottomSection
+                        <Img src = {headshot}  />
                     </BottomSection>
                 </Main>
             </HomeInnerContainer>
