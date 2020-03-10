@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import headshot from '../images/devHeadshotBW.JPG';
 
 const HomeOuterContainer = styled.div`
     display: flex;
@@ -25,6 +26,8 @@ const Header = styled.header`
     justify-content:space-between;
     width:100%;
     border: 2px solid blue;
+    z-index: 1;
+    color:white;
 `;
 
 const Nav = styled.nav`
@@ -50,6 +53,11 @@ const TopSection = styled.section`
     min-height: 100vh;
 `;
 
+const Img = styled.img`
+    width:100%;
+    z-index: -1;
+`;
+
 const BottomSection = styled.section`
     width:100%;
     border: 2px solid orange;
@@ -73,7 +81,7 @@ function Home() {
                 </Header>
                 <Main>
                     <TopSection>
-                        TopSection
+                        <Img src = {headshot}  />
                     </TopSection>
                     <BottomSection>
                         BottomSection
