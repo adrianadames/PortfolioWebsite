@@ -6,6 +6,7 @@ const HomeOuterContainer = styled.div`
     display: flex;
     justify-content:center;
     border: 2px solid red;
+    background-color:#040F0F;
 `;
 
 const HomeInnerContainer = styled.div`
@@ -19,6 +20,7 @@ const HomeInnerContainer = styled.div`
     left:0px;
     border: 4px solid brown;
     height:200vh;
+    background-color:#040F0F;
 `;
 
 const Header = styled.header`
@@ -51,6 +53,34 @@ const TopSection = styled.section`
     border: 2px solid pink;
     height: 100vh;
     min-height:800px;
+    position:relative;
+`;
+
+const ImgBorderWrapper = styled.div`
+    background-color: none;
+    width:100%;
+    height:100%;
+    border:50px solid gold;
+    position:relative;
+`;
+
+const ImgGradientDiv = styled.div`
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color:transparent;   
+    border:100px solid transparent; 
+    background-image: 
+        linear-gradient(to bottom, #040F0F, transparent), 
+        linear-gradient(to left,  #040F0F, transparent), 
+        linear-gradient(to top, #040F0F, transparent), 
+        linear-gradient(to right, #040F0F, transparent);
+    background-origin: border-box;
+    background-size: 100% 100px, 100px 100%, 100% 100px, 100px 100%; // width height
+    background-position: top left, top right, bottom right, bottom left; // x-axis y-axis
+    background-repeat: no-repeat;
 `;
 
 const Img = styled.img`
@@ -58,6 +88,7 @@ const Img = styled.img`
     height:100%;
     object-fit: cover;
     z-index: -1;
+    opacity: 0.2;
 `;
 
 const BottomSection = styled.section`
@@ -84,6 +115,7 @@ function Home() {
                 <Main>
                     <TopSection>
                         <Img src = {headshot}  />
+                        <ImgGradientDiv>hello</ImgGradientDiv>
                     </TopSection>
                     <BottomSection>
                         <Img src = {headshot}  />
