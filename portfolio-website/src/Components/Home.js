@@ -56,14 +56,6 @@ const TopSection = styled.section`
     position:relative;
 `;
 
-const ImgBorderWrapper = styled.div`
-    background-color: none;
-    width:100%;
-    height:100%;
-    border:50px solid gold;
-    position:relative;
-`;
-
 const ImgGradientDiv = styled.div`
     position:absolute;
     top:0px;
