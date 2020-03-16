@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import headshot from '../images/devHeadshotBW.JPG';
+import headshot from '../images/devHeadshotBWCropped2.jpg';
 
 const HomeOuterContainer = styled.div`
     display: flex;
@@ -54,6 +54,10 @@ const TopSection = styled.section`
     height: 100vh;
     min-height:800px;
     position:relative;
+    color:white;
+    @media(max-width:500px) {
+        min-height:300px;
+    }
 `;
 
 const ImgGradientDiv = styled.div`
@@ -70,7 +74,7 @@ const ImgGradientDiv = styled.div`
         linear-gradient(to top, #040F0F, transparent), 
         linear-gradient(to right, #040F0F, transparent);
     background-origin: border-box;
-    background-size: 100% 100px, 100px 100%, 100% 100px, 100px 100%; // width height
+    background-size: 100% 20%, 20% 100%, 100% 20%, 20% 100%; // width height
     background-position: top left, top right, bottom right, bottom left; // x-axis y-axis
     background-repeat: no-repeat;
 `;
@@ -81,6 +85,9 @@ const Img = styled.img`
     object-fit: cover;
     z-index: -1;
     opacity: 0.2;
+    @media(max-width:600px) {
+        object-fit:cover;
+    }
 `;
 
 const BottomSection = styled.section`
@@ -88,7 +95,6 @@ const BottomSection = styled.section`
     border: 2px solid orange;
     height: 100vh;
 `;
-
 
 
 function Home() {
@@ -108,6 +114,7 @@ function Home() {
                     <TopSection>
                         <Img src = {headshot}  />
                         <ImgGradientDiv>hello</ImgGradientDiv>
+                        <div>anyone</div>
                     </TopSection>
                     <BottomSection>
                         <Img src = {headshot}  />
