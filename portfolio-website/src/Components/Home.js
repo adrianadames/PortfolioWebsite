@@ -7,6 +7,9 @@ const HomeOuterContainer = styled.div`
     justify-content:center;
     border: 2px solid red;
     background-color:#040F0F;
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.6rem;
+    color:rgba(252, 255, 252, 0.5);
 `;
 
 const HomeInnerContainer = styled.div`
@@ -28,14 +31,14 @@ const Header = styled.header`
     justify-content:space-between;
     width:100%;
     border: 2px solid blue;
-    z-index: 1;
-    color:white;
+    z-index: 1;     
 `;
 
 const Nav = styled.nav`
     display:flex;
     justify-content:space-between;
     border: 2px purple;
+    font-size:2.4rem;
 `;
 
 const Main = styled.main`
@@ -54,7 +57,7 @@ const TopSection = styled.section`
     height: 100vh;
     min-height:800px;
     position:relative;
-    color:white;
+     
     @media(max-width:500px) {
         min-height:300px;
     }
@@ -103,7 +106,7 @@ function Home() {
         <HomeOuterContainer>
             <HomeInnerContainer>
                 <Header>
-                    <h1>Adrian Adames</h1>
+                    <h2 style = {{'font-size':'4.8rem'}}>Adrian Adames</h2>
                     <Nav>
                         <div>Home</div>
                         <div>Projects</div>

@@ -52,3 +52,8 @@ table {
 * {
     box-sizing: border-box;
 }
+
+/* setting font-size base value so that 1rem = 10px */
+html {
+	font-size:62.5%;
+}
