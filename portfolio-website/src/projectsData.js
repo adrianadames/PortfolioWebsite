@@ -1,6 +1,6 @@
 
 
-const projectData = [
+const projectsData = [
     {
         id: 1,
         title: 'Voice Chatroom',
@@ -40,6 +40,6 @@ const projectData = [
             'Set up the backend logic for achieving realtime bi-directional chat via WebSockets via the Pusher API and the associated front-end logic to enable the user to chat.'
         ]
     }
-
-
 ]
+
+export default projectsData

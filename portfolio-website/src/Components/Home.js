@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import headshot from '../images/devHeadshotBWCropped2.jpg';
+import Project from './Project';
+import projectsData from '../projectsData';
 
 const HomeOuterContainer = styled.div`
     display: flex;
@@ -10,6 +12,7 @@ const HomeOuterContainer = styled.div`
     font-family: 'Montserrat', sans-serif;
     font-size:1.6rem;
     color:rgba(252, 255, 252, 0.5);
+    position:relative;
 `;
 
 const HomeInnerContainer = styled.div`
@@ -23,6 +26,10 @@ const HomeInnerContainer = styled.div`
     left:0px;
     border: 4px solid brown;
     height:200vh;
+    min-height:1600px;
+    @media(max-width:500px) {
+        min-height:600px;
+    }
     background-color:#040F0F;
 `;
 
@@ -99,8 +106,13 @@ const Img = styled.img`
 
 const BottomSection = styled.section`
     width:100%;
-    border: 2px solid orange;
+    border: 6px solid orange;
     height: 100vh;
+    min-height:800px;
+    position:relative;
+    @media(max-width:500px) {
+        min-height:300px;
+    }
 `;
 
 const TopContentDiv = styled.div`
@@ -117,6 +129,10 @@ const MainHeadlineH1 = styled.h1`
     position:absolute;
     top:35%;
     line-height: 1.5;
+`;
+
+const MainHeadlineH2 = styled.h2`
+    font-size:4.8rem;
 `;
 
 const SubHeadlineH3 = styled.h3`
@@ -154,13 +170,21 @@ const DownArrowContainerDiv = styled.div`
 `;
 
 
+const ProjectsContainerDiv = styled.div`
+    border:1px solid green;
+    display:flex;
+    flex-direction:column;
+    
+`;
+
+
 function Home() {
 
     return (
         <HomeOuterContainer>
             <HomeInnerContainer>
                 <Header>
-                    <h2 style = {{'font-size':'4.8rem'}}>Adrian Adames</h2>
+                    <MainHeadlineH2>Adrian Adames</MainHeadlineH2>
                     <Nav>
                         <div>HOME</div>
                         <div>PROJECTS</div>
@@ -187,13 +211,18 @@ function Home() {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E5E5E5"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
                                 </IconsContainerDiv>
                                 <DownArrowContainerDiv>
-                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#E5E5E5"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg>
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" fill="#E5E5E5"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg>
                                 </DownArrowContainerDiv>
                             </TopContentFooterDiv>
                         </TopContentDiv>
                     </TopSection>
                     <BottomSection>
-                        <Img src = {headshot}  />
+                        <MainHeadlineH2>Projects</MainHeadlineH2>
+                        <ProjectsContainerDiv>
+                            {projectsData.map((projectData, index) => (
+                                <Project key = {index} projectData = {projectData}/>
+                            ))}
+                        </ProjectsContainerDiv>
                     </BottomSection>
                 </Main>
             </HomeInnerContainer>
