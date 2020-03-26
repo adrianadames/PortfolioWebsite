@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import headshot from '../images/devHeadshotBWCropped2.jpg';
+import projectsData from '../projectsData';
+import ProjectCard from './ProjectCard'
 
 const HomeOuterContainer = styled.div`
     display: flex;
@@ -174,17 +176,6 @@ const ProjectsContainerDiv = styled.div`
     flex-wrap:wrap;
 `;
 
-const ProjectContainerDiv = styled.div`
-    border:2px solid red;
-    width:250px;
-    height:400px;
-    display:flex;
-    flex-direction:column;
-`;
-
-
-
-
 
 function Home() {
 
@@ -228,36 +219,14 @@ function Home() {
                     <BottomSection>
                         <MainHeadlineH2>Projects</MainHeadlineH2>
                         <ProjectsContainerDiv>
-                            <ProjectContainerDiv>
-                                <div style = {{height:'70%'}}>
-                                    Piktorlog Image
-                                </div>
-                                <div>
-                                    Title: Piktorlog App 
-                                    <br></br>
-                                    <br></br>
-                                    Description: Make photo albums.
-                                </div>
-                                
-                            </ProjectContainerDiv>
-                            <ProjectContainerDiv>
-                                <div style = {{height:'70%'}}>
-                                    Voice Chatroom Image
-                                </div>
-                                <div>
-                                    Title: Voice Chatroom 
-                                    <br></br>
-                                    <br></br>
-                                    Description: Create voice chatroom groups where you can talk directly into your group’s ears and hear others talk into your ears.
-                                </div>
-                                
-                            </ProjectContainerDiv>
-                            <ProjectContainerDiv>
-                                MUD App
-                            </ProjectContainerDiv>
-                            <ProjectContainerDiv>
-                                Notes App
-                            </ProjectContainerDiv>
+                            {projectsData.map((projectData, index) => {
+                                return (
+                                    <ProjectCard 
+                                        key={index} 
+                                        projectData={projectData}
+                                    />
+                                )
+                            })}
                         </ProjectsContainerDiv>
                     </BottomSection>
                 </Main>
