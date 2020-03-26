@@ -29,6 +29,20 @@ const projectsData = [
     },
     {
         id: 3,
+        title: 'MUD Text Adventure Game',
+        description: 'Explore a multi-user dungeon world and chat with other users along the way.',
+        techStack: ['React', 'Styled Components', 'Django', 'Pusher API'],
+        link: 'https://adrian-mud-project.netlify.com',
+        github: ['github.com/adrianadames/LambdaMUD-Client', 'github.com/adrianadames/LambdaMUD-Project'],
+        img: 'mud1', 
+        responsibilities: [
+            'Architected the component level structure of the app, and designed the look of the app to harken to the era of time when MUD text adventure games were popular.',
+            'Styled app according to the above-mentioned design spec via styled components.',
+            'Set up the backend logic for achieving realtime bi-directional chat via WebSockets via the Pusher API and the associated front-end logic to enable the user to chat.'
+        ]
+    }, 
+    {
+        id: 4,
         title: 'Simple Notes App',
         description: 'Create, edit, and delete notes using a simple notes app.',
         techStack: ['React', 'Styled Components', 'Node.js/Express', 'Knex'],
@@ -41,20 +55,6 @@ const projectsData = [
             'Designed, constructed, and deployed a simple database and REST API for user registration and login and the creation, editing, and deletion of user notes.'
         ],
     },
-    {
-        id: 4,
-        title: 'MUD Text Adventure Game',
-        description: 'Explore a multi-user dungeon world and chat with other users along the way.',
-        techStack: ['React', 'Styled Components', 'Django', 'Pusher API'],
-        link: 'https://adrian-mud-project.netlify.com',
-        github: ['github.com/adrianadames/LambdaMUD-Client', 'github.com/adrianadames/LambdaMUD-Project'],
-        img: 'mud1', 
-        responsibilities: [
-            'Architected the component level structure of the app, and designed the look of the app to harken to the era of time when MUD text adventure games were popular.',
-            'Styled app according to the above-mentioned design spec via styled components.',
-            'Set up the backend logic for achieving realtime bi-directional chat via WebSockets via the Pusher API and the associated front-end logic to enable the user to chat.'
-        ]
-    }
 ]
 
 export default projectsData
