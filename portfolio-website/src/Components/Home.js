@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import headshot from '../images/devHeadshotBWCropped2.jpg';
-import Project from './Project';
-import projectsData from '../projectsData';
 
 const HomeOuterContainer = styled.div`
     display: flex;
@@ -25,7 +23,7 @@ const HomeInnerContainer = styled.div`
     top:0px;
     left:0px;
     border: 4px solid brown;
-    height:200vh;
+    height:300vh;
     min-height:1600px;
     @media(max-width:500px) {
         min-height:600px;
@@ -47,7 +45,7 @@ const Nav = styled.nav`
     display:flex;
     justify-content:space-between;
     width:40%;
-    max-width:400px;
+    max-width:600px;
     border: 5px solid yellow;
     font-size:2.4rem;
     font-weight: 200;
@@ -169,13 +167,23 @@ const DownArrowContainerDiv = styled.div`
     grid-column:2/3;
 `;
 
-
 const ProjectsContainerDiv = styled.div`
-    border:1px solid green;
+    border:4px solid lightgreen;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+`;
+
+const ProjectContainerDiv = styled.div`
+    border:2px solid red;
+    width:250px;
+    height:400px;
     display:flex;
     flex-direction:column;
-    
 `;
+
+
+
 
 
 function Home() {
@@ -188,6 +196,7 @@ function Home() {
                     <Nav>
                         <div>HOME</div>
                         <div>PROJECTS</div>
+                        <div>SKILLS</div>
                         <div>ABOUT</div>
                     </Nav>
                 </Header>
@@ -219,9 +228,36 @@ function Home() {
                     <BottomSection>
                         <MainHeadlineH2>Projects</MainHeadlineH2>
                         <ProjectsContainerDiv>
-                            {projectsData.map((projectData, index) => (
-                                <Project key = {index} projectData = {projectData}/>
-                            ))}
+                            <ProjectContainerDiv>
+                                <div style = {{height:'70%'}}>
+                                    Piktorlog Image
+                                </div>
+                                <div>
+                                    Title: Piktorlog App 
+                                    <br></br>
+                                    <br></br>
+                                    Description: Make photo albums.
+                                </div>
+                                
+                            </ProjectContainerDiv>
+                            <ProjectContainerDiv>
+                                <div style = {{height:'70%'}}>
+                                    Voice Chatroom Image
+                                </div>
+                                <div>
+                                    Title: Voice Chatroom 
+                                    <br></br>
+                                    <br></br>
+                                    Description: Create voice chatroom groups where you can talk directly into your group’s ears and hear others talk into your ears.
+                                </div>
+                                
+                            </ProjectContainerDiv>
+                            <ProjectContainerDiv>
+                                MUD App
+                            </ProjectContainerDiv>
+                            <ProjectContainerDiv>
+                                Notes App
+                            </ProjectContainerDiv>
                         </ProjectsContainerDiv>
                     </BottomSection>
                 </Main>

@@ -8,6 +8,7 @@ const projectsData = [
         techStack: ['React', 'Bootstrap', 'Auth0', 'Express', 'Knex', 'Twilio', 'Stripe Library/API', 'Twilio', 'Cloudinary'],
         link: 'https://intercom.netlify.com',
         github: ['https://github.com/intercom-app'], 
+        img:'intercom1', 
         responsibilities: [
             'Set up the backend logic for adding money to user account using credit card and the backend logic that subtracts incurred charges from account balance.',
             'Set up the frontend UI/UX for adding a credit card and adding money to user account.', 
@@ -21,6 +22,7 @@ const projectsData = [
         techStack: ['React', 'Styled Components', 'Node.js/Express', 'Knex'],
         link: 'https://adrian-notes-project.netlify.com',
         github: ['github.com/adrianadames/front-end-project-week', 'github.com/adrianadames/LambdaNotesBackend'],
+        img: 'notes1',
         responsibilities: [
             'Architected the component level structure of the app, aiming for simplicity in the management and manipulation of state.',
             'Styled app according to the design spec via styled components.',
@@ -33,7 +35,8 @@ const projectsData = [
         description: 'Explore a multi-user dungeon world and chat with other users along the way.',
         techStack: ['React', 'Styled Components', 'Django', 'Pusher API'],
         link: 'https://adrian-mud-project.netlify.com',
-        github: ['github.com/adrianadames/LambdaMUD-Client', 'github.com/adrianadames/LambdaMUD-Project'], 
+        github: ['github.com/adrianadames/LambdaMUD-Client', 'github.com/adrianadames/LambdaMUD-Project'],
+        img: 'mud1', 
         responsibilities: [
             'Architected the component level structure of the app, and designed the look of the app to harken to the era of time when MUD text adventure games were popular.',
             'Styled app according to the above-mentioned design spec via styled components.',
