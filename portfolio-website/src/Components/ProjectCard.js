@@ -18,6 +18,13 @@ const ProjectCardDetailsDiv = styled.div`
     flex-direction:column;
 `;
 
+const ProjectImg = styled.img`
+    width:100%;
+    height:100%;
+    object-fit: cover;
+`;
+
+
 // ok. so this card will have two sides. 
 // one side will have project image, project title, and project description
 // other side will have my project responsibilities/accomplishments, the tech stack, a link leading to the deployed site, and the github link for the project
@@ -38,7 +45,7 @@ const ProjectCard = (props) => {
                 <ProjectCardBasicDiv>
                     {console.log(projectData)}
                     <div style = {{'border':'2px solid blue'}}>
-                        image goes here
+                        <ProjectImg src = {projectData.url} />
                     </div>
                     <div style = {{'border':'2px solid purple'}}>
                         Project Title and Description go here
@@ -46,6 +53,7 @@ const ProjectCard = (props) => {
                     <div onClick = {() => toggleCardView()}> 
                         more details
                     </div>
+
                 </ProjectCardBasicDiv>
                 :
                 <ProjectCardDetailsDiv>

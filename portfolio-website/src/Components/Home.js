@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import headshot from '../images/devHeadshotBWCropped2.jpg';
+// import headshot from '../images/devHeadshotBWCropped2.jpg';
 import projectsData from '../projectsData';
 import ProjectCard from './ProjectCard'
 
@@ -193,7 +193,7 @@ function Home() {
                 </Header>
                 <Main>
                     <TopSection>
-                        <Img src = {headshot}  />
+                        <Img src = '/images/devHeadshotBWCropped2.jpg'  />
                         <ImgGradientDiv></ImgGradientDiv>
                         <TopContentDiv>
                             <MainHeadlineH1>
@@ -228,6 +228,20 @@ function Home() {
                                 )
                             })}
                         </ProjectsContainerDiv>
+                    </BottomSection>
+                    <BottomSection>
+                        <MainHeadlineH2>SKILLS</MainHeadlineH2>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>Javascript</li>
+                            <li>Python</li>
+                            <li>Axios</li>
+                            <li>Redux</li>
+                            <li>Thunk</li>
+                            <li>Node.js/Express</li>
+                            <li>React</li>
+                            <li>Boostrap</li>
+                        </ul>
                     </BottomSection>
                 </Main>
             </HomeInnerContainer>
