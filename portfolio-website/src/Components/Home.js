@@ -1,18 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-// import headshot from '../images/devHeadshotBWCropped2.jpg';
 import projectsData from '../projectsData';
 import ProjectCard from './ProjectCard'
 
 const HomeOuterContainer = styled.div`
     display: flex;
     justify-content:center;
-    border: 2px solid red;
     background-color:#040F0F;
     font-family: 'Montserrat', sans-serif;
     font-size:1.6rem;
     color:rgba(252, 255, 252, 0.5);
-    position:relative;
+    border: 5px solid red;
 `;
 
 const HomeInnerContainer = styled.div`
@@ -22,15 +20,12 @@ const HomeInnerContainer = styled.div`
     width:100%;
     max-width:1200px;
     position:relative;
-    top:0px;
-    left:0px;
-    border: 4px solid brown;
-    height:300vh;
-    min-height:1600px;
+    background-color:#040F0F;
+    border: 4px solid aqua;
+
     @media(max-width:500px) {
         min-height:600px;
     }
-    background-color:#040F0F;
 `;
 
 const Header = styled.header`
@@ -39,49 +34,74 @@ const Header = styled.header`
     align-items:center;
     width:100%;
     height:100px;
-    border: 2px solid blue;
-    z-index: 1;     
+    z-index: 1;
+    border: 5px solid fuchsia;
+    
+    @media(max-width:1000px) {
+        flex-direction:column;
+    }
+
+    @media(max-width:600px) {
+        flex-direction:row;
+    }
 `;
 
 const Nav = styled.nav`
     display:flex;
     justify-content:space-between;
     width:40%;
-    max-width:600px;
-    border: 5px solid yellow;
+    min-width:500px;
     font-size:2.4rem;
     font-weight: 200;
+    border: 5px solid yellow;
+
+    @media(max-width:600px) {
+        display:none;
+    }
+`;
+
+const BurgerDiv= styled.nav`
+    display:none;
+    height:100px;
+    width:100px;
+    border:5px solid red;
+    background-color:pink;
+
+    @media(max-width:600px) {
+        display: block;
+    }
 `;
 
 const Main = styled.main`
     display:flex;
     flex-direction:column;
     width:100%;
-    border: 3px solid green;
-    position:absolute;
-    top:0px;
-    left:0px;
+    position:relative;
+    top:-100px;
+    border: 10px solid teal;
 `;
 
-const TopSection = styled.section`
+const LandingSection = styled.section`
     width:100%;
-    border: 2px solid pink;
+    border: 10px solid pink;
     height: 100vh;
     min-height:800px;
     position:relative;
+
+    //need to figure out what I"m going to do with content in here when mobile
     @media(max-width:500px) {
         min-height:300px;
     }
 `;
 
-const ImgGradientDiv = styled.div`
+const GradientOverlayDiv = styled.div`
     position:absolute;
     top:0px;
     left:0px;
     width:100%;
     height:100%;
     background-color:transparent;   
-    border:100px solid transparent; 
+    border:10% solid transparent;
     background-image: 
         linear-gradient(to bottom, #040F0F, transparent), 
         linear-gradient(to left,  #040F0F, transparent), 
@@ -93,7 +113,7 @@ const ImgGradientDiv = styled.div`
     background-repeat: no-repeat;
 `;
 
-const Img = styled.img`
+const LandingImg = styled.img`
     width:100%;
     height:100%;
     object-fit: cover;
@@ -104,7 +124,16 @@ const Img = styled.img`
     }
 `;
 
-const BottomSection = styled.section`
+const LandingContentDiv = styled.div`
+    position:absolute;
+    top:0px;
+    left:0px;
+    border: 2px solid orange;
+    width:100%;
+    height:100%;
+`;
+
+const ProjectSection = styled.section`
     width:100%;
     border: 6px solid orange;
     height: 100vh;
@@ -115,14 +144,18 @@ const BottomSection = styled.section`
     }
 `;
 
-const TopContentDiv = styled.div`
-    position:absolute;
-    top:0px;
-    left:0px;
-    border: 2px solid orange;
+const SkillsSection = styled.section`
     width:100%;
-    height:100%;
+    border: 6px solid orange;
+    height: 100vh;
+    min-height:800px;
+    position:relative;
+    @media(max-width:500px) {
+        min-height:300px;
+    }
 `;
+
+
 
 const MainHeadlineH1 = styled.h1`
     font-size:6.4rem;
@@ -133,6 +166,10 @@ const MainHeadlineH1 = styled.h1`
 
 const MainHeadlineH2 = styled.h2`
     font-size:4.8rem;
+
+    @media(max-width:600px) {
+        font-size:3.8rem;
+    }
 `;
 
 const SubHeadlineH3 = styled.h3`
@@ -190,12 +227,13 @@ function Home() {
                         <div>SKILLS</div>
                         <div>ABOUT</div>
                     </Nav>
+                    <BurgerDiv></BurgerDiv>
                 </Header>
                 <Main>
-                    <TopSection>
-                        <Img src = '/images/devHeadshotBWCropped2.jpg'  />
-                        <ImgGradientDiv></ImgGradientDiv>
-                        <TopContentDiv>
+                    <LandingSection>
+                        <LandingImg src = '/images/devHeadshotBWCropped2.jpg'  />
+                        <GradientOverlayDiv></GradientOverlayDiv>
+                        <LandingContentDiv>
                             <MainHeadlineH1>
                                 Hi. I’m Adrian.
                                 <br></br>
@@ -214,9 +252,9 @@ function Home() {
                                     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" fill="#E5E5E5"><path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z"/></svg>
                                 </DownArrowContainerDiv>
                             </TopContentFooterDiv>
-                        </TopContentDiv>
-                    </TopSection>
-                    <BottomSection>
+                        </LandingContentDiv>
+                    </LandingSection>
+                    <ProjectSection>
                         <MainHeadlineH2>Projects</MainHeadlineH2>
                         <ProjectsContainerDiv>
                             {projectsData.map((projectData, index) => {
@@ -228,8 +266,8 @@ function Home() {
                                 )
                             })}
                         </ProjectsContainerDiv>
-                    </BottomSection>
-                    <BottomSection>
+                    </ProjectSection>
+                    <SkillsSection>
                         <MainHeadlineH2>SKILLS</MainHeadlineH2>
                         <ul>
                             <li>HTML/CSS</li>
@@ -242,7 +280,7 @@ function Home() {
                             <li>React</li>
                             <li>Boostrap</li>
                         </ul>
-                    </BottomSection>
+                    </SkillsSection>
                 </Main>
             </HomeInnerContainer>
         </HomeOuterContainer>
