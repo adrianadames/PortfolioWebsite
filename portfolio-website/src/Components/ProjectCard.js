@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import image from '../images/mud1.PNG';
+// import image from '../images/mud1.PNG';
 
-const ProjectCardBasicDiv = styled.div`
+const ProjectCardFrontsideDiv = styled.div`
     border:2px solid red;
     width:250px;
     height:400px;
@@ -10,7 +10,7 @@ const ProjectCardBasicDiv = styled.div`
     flex-direction:column;
 `;
 
-const ProjectCardDetailsDiv = styled.div`
+const ProjectCardBacksideDiv = styled.div`
     border:3px solid pink;
     width:250px;
     height:400px;
@@ -42,7 +42,7 @@ const ProjectCard = (props) => {
         <>
             {!projectDetailsView 
                 ? 
-                <ProjectCardBasicDiv>
+                <ProjectCardFrontsideDiv>
                     {console.log(projectData)}
                     <div style = {{'border':'2px solid blue'}}>
                         <ProjectImg src = {projectData.url} />
@@ -54,9 +54,9 @@ const ProjectCard = (props) => {
                         more details
                     </div>
 
-                </ProjectCardBasicDiv>
+                </ProjectCardFrontsideDiv>
                 :
-                <ProjectCardDetailsDiv>
+                <ProjectCardBacksideDiv>
                     {console.log(projectData)}
                     <div style = {{'border':'2px solid blue'}}>
                         <h3>Responsibilities</h3>
@@ -81,7 +81,7 @@ const ProjectCard = (props) => {
                     <div onClick = {() => toggleCardView()}>
                         back to basic view
                     </div>
-                </ProjectCardDetailsDiv>
+                </ProjectCardBacksideDiv>
             }
     
         </>
