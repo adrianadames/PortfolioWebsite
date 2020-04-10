@@ -155,8 +155,6 @@ const SkillsSection = styled.section`
     }
 `;
 
-
-
 const MainHeadlineH1 = styled.h1`
     font-size:6.4rem;
     position:absolute;
