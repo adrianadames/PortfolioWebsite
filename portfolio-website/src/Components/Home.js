@@ -136,7 +136,7 @@ const LandingContentDiv = styled.div`
 const ProjectSection = styled.section`
     width:100%;
     border: 6px solid orange;
-    height: 100vh;
+    // height: 100vh;
     min-height:800px;
     position:relative;
     @media(max-width:500px) {
@@ -146,7 +146,7 @@ const ProjectSection = styled.section`
 
 const SkillsSection = styled.section`
     width:100%;
-    border: 6px solid orange;
+    border: 6px solid purple;
     height: 100vh;
     min-height:800px;
     position:relative;
@@ -207,8 +207,10 @@ const DownArrowContainerDiv = styled.div`
 const ProjectsContainerDiv = styled.div`
     border:4px solid lightgreen;
     display:flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
+    // justify-content:space-evenly;
+    // flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
 `;
 
 
