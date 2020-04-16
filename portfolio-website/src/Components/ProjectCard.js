@@ -51,9 +51,7 @@ const ProjectCard = (props) => {
     console.log('props =', props)
     
     const [projectData, setProjectData] = useState(props.projectData);
-
     const [projectDetailsView, setProjectDetailsView] = useState(false);
-
     const toggleCardView = () => {setProjectDetailsView(!projectDetailsView)};
 
     return ( 
@@ -74,9 +72,6 @@ const ProjectCard = (props) => {
                     <ProjectDescriptionContainer>
                         {projectData.description}
                     </ProjectDescriptionContainer>
-                    {/* <div style = {{'border':'2px solid purple', 'font-size': '2.5rem'}}>
-                        {projectData.description}
-                    </div> */}
 
                 </ProjectOverviewContainer>
                 :
