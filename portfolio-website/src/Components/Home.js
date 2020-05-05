@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import projectsData from '../projectsData';
-import ProjectCard from './ProjectCard'
+import ProjectCard from './ProjectCard';
 
 const HomeOuterContainer = styled.div`
     display: flex;
@@ -84,6 +84,7 @@ const Main = styled.main`
 const LandingSection = styled.section`
     width:100%;
     border: 10px solid pink;
+    margin-bottom:30px;
     height: 100vh;
     min-height:800px;
     position:relative;
@@ -146,9 +147,11 @@ const ProjectSection = styled.section`
 
 const SkillsSection = styled.section`
     width:100%;
+    font-size:2.2rem;
+    line-height: 1.1;
     border: 6px solid purple;
-    height: 100vh;
-    min-height:800px;
+    // height: 100vh;
+    // min-height:800px;
     position:relative;
     @media(max-width:500px) {
         min-height:300px;
@@ -164,6 +167,7 @@ const MainHeadlineH1 = styled.h1`
 
 const MainHeadlineH2 = styled.h2`
     font-size:4.8rem;
+    margin-bottom: 20px;
 
     @media(max-width:600px) {
         font-size:3.8rem;
@@ -273,12 +277,17 @@ function Home() {
                             <li>HTML/CSS</li>
                             <li>Javascript</li>
                             <li>Python</li>
-                            <li>Axios</li>
-                            <li>Redux</li>
-                            <li>Thunk</li>
-                            <li>Node.js/Express</li>
                             <li>React</li>
-                            <li>Boostrap</li>
+                            <li>Node.js/Express</li>
+                            <li>Django</li>
+                            <li>Redux</li>
+                            <li>Axios</li>
+                            <li>PostgreSQL</li>
+                            <li>SQLite3</li>
+                            <li>Knex.js</li>
+                            <li>Styled Components</li>
+                            <li>Bootstrap</li>
+                            <li>Semantic UI</li>
                         </ul>
                     </SkillsSection>
                 </Main>
