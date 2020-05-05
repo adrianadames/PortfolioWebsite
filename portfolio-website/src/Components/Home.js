@@ -64,8 +64,8 @@ const BurgerDiv= styled.nav`
     display:none;
     height:100px;
     width:100px;
-    border:5px solid red;
-    background-color:pink;
+    // border:5px solid red;
+    // background-color:pink;
 
     @media(max-width:600px) {
         display: block;
@@ -163,6 +163,11 @@ const MainHeadlineH1 = styled.h1`
     position:absolute;
     top:35%;
     line-height: 1.5;
+
+    @media(max-width:600px) {
+        margin-top:-120px;
+        font-size:5rem;
+    }
 `;
 
 const MainHeadlineH2 = styled.h2`
@@ -180,6 +185,11 @@ const SubHeadlineH3 = styled.h3`
     top:70%;
     color:#E5E5E5;
     line-height: 1.5;
+
+    @media(max-width:600px) {
+        margin-top:-90px;
+        // font-size:5rem;
+    }
 `;
 
 const TopContentFooterDiv = styled.div`
