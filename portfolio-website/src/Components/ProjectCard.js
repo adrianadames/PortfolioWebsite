@@ -152,7 +152,7 @@ const ProjectCard = (props) => {
                                     <a href = {`${projectData.link}`}>{projectData.link}</a>
                                 </li>
                             </ul>
-                            Github Repos:
+                            Github Repo(s):
                             <ul>
                                 {projectData.github.map(githubLink=> {
                                     return (
