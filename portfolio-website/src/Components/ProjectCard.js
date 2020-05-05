@@ -7,6 +7,8 @@ const ProjectCardContainer = styled.div`
     width:100%;
     max-width:700px;
     // height:700px;
+    font-size:2.2rem;
+    line-height: 1.1;
 `;
 
 const ProjectOverviewContainer = styled.div`
@@ -16,7 +18,7 @@ const ProjectOverviewContainer = styled.div`
 `;
 
 const ProjectDetailsContainer = styled.div`
-    border:6px solid pink;
+    border:6px solid limegreen;
     display:flex;
     flex-direction:column;
 `;
@@ -42,6 +44,26 @@ const ProjectDescriptionContainer = styled.div`
     line-height: 1.2;
 `;
 
+const ProjectResponsibilitiesContainer = styled.div`
+    
+    border:2px solid red;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+    
+`;
+
+
+const ProjectTechStackContainer = styled.div`
+    border:2px solid purple;
+    margin-bottom:10px;
+`;
+
+const ProjectLinksContainer = styled.div`
+    border:2px solid pink;
+`;
+
+
 
 // ok. so this card will have two sides. 
 // one side will have project image, project title, and project description
@@ -58,7 +80,7 @@ const ProjectCard = (props) => {
         <ProjectCardContainer>
             {!projectDetailsView 
                 ? 
-                <ProjectOverviewContainer>
+                <ProjectOverviewContainer onClick = {() => toggleCardView()}>
                     {console.log(projectData)}
                     
                     <ProjectImg src = {projectData.url} onClick = {() => toggleCardView()} />
@@ -75,34 +97,78 @@ const ProjectCard = (props) => {
 
                 </ProjectOverviewContainer>
                 :
-                <ProjectDetailsContainer>
+                <ProjectDetailsContainer onClick = {() => toggleCardView()}>
                     {console.log(projectData)}
-                    <div style = {{'border':'2px solid blue'}}>
-                    <div style = {{'border':'2px solid purple', 'font-size': '4rem', 'display':'flex', 'justify-content':'space-between', 'margin-bottom': '10px'}}>
-                        <h3>Responsibilities</h3>
-                        <div onClick = {() => toggleCardView()}> 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E5E5E5"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                    <ProjectResponsibilitiesContainer>
+                        {/* Top Heading  */}
+                        <div style = {{'display':'flex', 'justify-content':'space-between'}}>
+                            <h3 style = {{'font-size': '4rem', 'margin-bottom':'10px'}}>
+                                Responsibilities
+                            </h3>
+                            <div onClick = {() => toggleCardView()}> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#E5E5E5"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+                            </div>
                         </div>
-                    </div>
-                        
-                        <ul>
-                            {projectData.responsibilities.map(item => {
-                                return (
-                                    <li>{item}</li>
-                                )
-                            })}
-                        </ul>
-                    </div>
-                    <div style = {{'border':'2px solid purple'}}>
-                        <h3 style = {{'font-size': '4rem'}}>Tech Stack</h3>
-                        <ul>
-                            {projectData.techStack.map(item => {
-                                return (
-                                    <li>{item}</li>
-                                )
-                            })}
-                        </ul>
-                    </div>
+                        {/* Project Responsibilities List  */}
+                        <div>
+                            <ul>
+                                {projectData.responsibilities.map(responsibility => {
+                                    return (
+                                        <li style = {{'margin-bottom':'10px'}}>{responsibility}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    </ProjectResponsibilitiesContainer>
+                    
+                    <ProjectTechStackContainer>
+                        {/* Top Heading  */}
+                        <h3 style = {{'font-size': '4rem', 'margin-bottom':'10px'}}>
+                            Tech Stack
+                        </h3>
+                        {/* Tech Stack List  */}
+                        <div>
+                            <ul>
+                                {projectData.techStack.map(techStackItem => {
+                                    return (
+                                        <li>{techStackItem}</li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    </ProjectTechStackContainer>
+
+
+                    <ProjectLinksContainer>
+                        {/* Top Heading  */}
+                        <h3 style = {{'font-size': '4rem', 'margin-bottom':'10px'}}>
+                            Links
+                        </h3>
+                        {/* Links List  */}
+                        <div>
+                            Deployed Website:
+                            <ul>
+                                <li>
+                                    <a href = {`${projectData.link}`}>{projectData.link}</a>
+                                </li>
+                            </ul>
+                            Github Repos:
+                            <ul>
+                                {projectData.github.map(githubLink=> {
+                                    return (
+                                        <li>
+                                            <a href = {`${githubLink}`}>{githubLink}</a>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+
+                    </ProjectLinksContainer>
+
+
+
+
                 </ProjectDetailsContainer>
             }
     

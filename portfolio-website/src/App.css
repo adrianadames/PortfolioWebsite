@@ -61,3 +61,7 @@ html {
 body {
 	background-color:#040F0F;
 }
+
+ul {
+	list-style: square inside;
+}
