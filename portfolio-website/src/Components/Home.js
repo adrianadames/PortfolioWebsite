@@ -10,7 +10,7 @@ const HomeOuterContainer = styled.div`
     font-family: 'Montserrat', sans-serif;
     font-size:1.6rem;
     color:rgba(252, 255, 252, 0.5);
-    border: 5px solid red;
+    // border: 5px solid red;
 `;
 
 const HomeInnerContainer = styled.div`
@@ -21,7 +21,7 @@ const HomeInnerContainer = styled.div`
     max-width:1200px;
     position:relative;
     background-color:#040F0F;
-    border: 4px solid aqua;
+    // border: 4px solid aqua;
 
     @media(max-width:500px) {
         min-height:600px;
@@ -35,7 +35,7 @@ const Header = styled.header`
     width:100%;
     height:100px;
     z-index: 1;
-    border: 5px solid fuchsia;
+    // border: 5px solid fuchsia;
     
     @media(max-width:1000px) {
         flex-direction:column;
@@ -53,7 +53,7 @@ const Nav = styled.nav`
     min-width:500px;
     font-size:2.4rem;
     font-weight: 200;
-    border: 5px solid yellow;
+    // border: 5px solid yellow;
 
     @media(max-width:600px) {
         display:none;
@@ -78,12 +78,12 @@ const Main = styled.main`
     width:100%;
     position:relative;
     top:-100px;
-    border: 10px solid teal;
+    // border: 10px solid teal;
 `;
 
 const LandingSection = styled.section`
     width:100%;
-    border: 10px solid pink;
+    // border: 10px solid pink;
     margin-bottom:30px;
     height: 100vh;
     min-height:800px;
@@ -129,14 +129,14 @@ const LandingContentDiv = styled.div`
     position:absolute;
     top:0px;
     left:0px;
-    border: 2px solid orange;
+    // border: 2px solid orange;
     width:100%;
     height:100%;
 `;
 
 const ProjectSection = styled.section`
     width:100%;
-    border: 6px solid orange;
+    // border: 6px solid orange;
     // height: 100vh;
     min-height:800px;
     position:relative;
@@ -149,7 +149,7 @@ const SkillsSection = styled.section`
     width:100%;
     font-size:2.2rem;
     line-height: 1.1;
-    border: 6px solid purple;
+    // border: 6px solid purple;
     // height: 100vh;
     // min-height:800px;
     position:relative;
@@ -187,7 +187,7 @@ const TopContentFooterDiv = styled.div`
     top:90%;
     width:100%;
     height:100px;
-    border: 2px solid orange;
+    // border: 2px solid orange;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
 `;
@@ -197,19 +197,19 @@ const IconsContainerDiv = styled.div`
     display:flex;
     justify-content:space-between; 
     width:50%;
-    border: 2px solid red;
+    // border: 2px solid red;
 `;
 
 const DownArrowContainerDiv = styled.div`
     position:absolute;
     top:50%;
     left:50%;
-    border: 2px solid pink;
+    // border: 2px solid pink;
     grid-column:2/3;
 `;
 
 const ProjectsContainerDiv = styled.div`
-    border:4px solid lightgreen;
+    // border:4px solid lightgreen;
     display:flex;
     // justify-content:space-evenly;
     // flex-wrap:wrap;

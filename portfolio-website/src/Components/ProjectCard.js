@@ -2,23 +2,25 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ProjectCardContainer = styled.div`
-    border:6px solid #89CFF0;
+    // border:6px solid #89CFF0;
+    border:4px solid rgba(252, 255, 252, 0.5);
+    padding:10px;
     margin-bottom:50px;
     width:100%;
-    max-width:700px;
+    max-width:710px;
     // height:700px;
     font-size:2.2rem;
     line-height: 1.1;
 `;
 
 const ProjectOverviewContainer = styled.div`
-    border:6px solid red;
+    // border:6px solid red;
     display:flex;
     flex-direction:column;
 `;
 
 const ProjectDetailsContainer = styled.div`
-    border:6px solid limegreen;
+    // border:6px solid limegreen;
     display:flex;
     flex-direction:column;
 `;
@@ -26,27 +28,27 @@ const ProjectDetailsContainer = styled.div`
 const ProjectImg = styled.img`
     width:100%;
     height:auto;
-    border: 6px solid blue;
+    // border: 6px solid blue;
 `;
 
 const ProjectTitleContainer = styled.div`
     display:flex;
     justify-content:space-between;
     font-size:4rem;
-    border:5px solid yellow;
+    // border:5px solid yellow;
     padding:10px 0px;
 `;
 
 const ProjectDescriptionContainer = styled.div`
     font-size:2.2rem;
-    border:5px solid orange;
+    // border:5px solid orange;
     padding:10px 0px;
     line-height: 1.2;
 `;
 
 const ProjectResponsibilitiesContainer = styled.div`
     
-    border:2px solid red;
+    // border:2px solid red;
     display:flex;
     flex-direction:column;
     margin-bottom:15px;
@@ -55,12 +57,12 @@ const ProjectResponsibilitiesContainer = styled.div`
 
 
 const ProjectTechStackContainer = styled.div`
-    border:2px solid purple;
+    // border:2px solid purple;
     margin-bottom:10px;
 `;
 
 const ProjectLinksContainer = styled.div`
-    border:2px solid pink;
+    // border:2px solid pink;
 `;
 
 
