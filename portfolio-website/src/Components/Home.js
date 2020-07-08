@@ -21,7 +21,9 @@ const HomeInnerContainer = styled.div`
     max-width:1200px;
     position:relative;
     background-color:#040F0F;
+    margin: 0 12px 0 12px;
     // border: 4px solid aqua;
+    
 
     @media(max-width:500px) {
         min-height:600px;
@@ -39,6 +41,7 @@ const Header = styled.header`
     
     @media(max-width:1000px) {
         flex-direction:column;
+        margin-top:20px;
     }
 
     @media(max-width:550px) {
@@ -165,16 +168,15 @@ const MainHeadlineH1 = styled.h1`
     line-height: 1.5;
 
     @media(max-width:1000px) {
-        margin-top:-60px;
+        margin-top:-120px;
         margin-left:20px;
         margin-right:20px;
+        font-size:6.1rem;
     }
     @media(max-width:550px) {
         margin-top:-120px;
         font-size:5rem;
     }
-
-
 `;
 
 const MainHeadlineH2 = styled.h2`
@@ -196,7 +198,7 @@ const SubHeadlineH3 = styled.h3`
     line-height: 1.5;
 
     @media(max-width:1000px) {
-        margin:-10px 20px 0 20px;
+        margin:-60px 20px 0 20px;
     }
 
     @media(max-width:550px) {
@@ -213,6 +215,7 @@ const TopContentFooterDiv = styled.div`
     // border: 2px solid orange;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
 `;
 
 const IconsContainerDiv = styled.div`
@@ -226,15 +229,20 @@ const IconsContainerDiv = styled.div`
 
     @media(max-width:1000px) {
         margin:0 20px 0 20px;
+        margin-top:-20px;
     }
 `;
 
 const DownArrowContainerDiv = styled.div`
-    position:absolute;
-    top:50%;
-    left:50%;
-    // border: 2px solid pink;
     grid-column:2/3;
+    grid-row:2/3;
+    display:flex;
+    justify-content:center;
+    // border: 2px solid pink;
+
+    @media(max-width:1000px) {
+        margin-top:-20px;
+    }
 `;
 
 const ProjectsContainerDiv = styled.div`
