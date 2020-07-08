@@ -63,6 +63,14 @@ const Nav = styled.nav`
     }
 `;
 
+const NavItem = styled.a`
+    color:rgba(252, 255, 252, 0.5);
+    text-decoration:none;
+    &:hover {
+        font-weight:300;
+    }
+`;
+
 const BurgerDiv= styled.nav`
     display:none;
     height:100px;
@@ -273,10 +281,10 @@ function Home() {
                 <Header>
                     <MainHeadlineH2>Adrian Adames</MainHeadlineH2>
                     <Nav>
-                        <div>HOME</div>
-                        <div onClick = {() => scrollProjectsIntoView()}>PROJECTS</div>
-                        <div onClick = {() => scrollSkillsIntoView()}>SKILLS</div>
-                        <div>ABOUT</div>
+                        <NavItem href = "/">HOME</NavItem>
+                        <NavItem onClick = {() => scrollProjectsIntoView()}>PROJECTS</NavItem>
+                        <NavItem onClick = {() => scrollSkillsIntoView()}>SKILLS</NavItem>
+                        <NavItem href = "/about">ABOUT</NavItem>
                     </Nav>
                     <BurgerDiv></BurgerDiv>
                 </Header>
