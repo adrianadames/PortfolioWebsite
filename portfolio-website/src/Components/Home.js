@@ -282,7 +282,7 @@ function Home() {
                 <Header>
                     <MainHeadlineH2>
                         <a href = "/" style = {{color:'rgba(252, 255, 252, 0.5)', textDecoration:'none'}}>
-                        Adrian Adames
+                            Adrian Adames
                         </a>
                     </MainHeadlineH2>
                     <Nav>
