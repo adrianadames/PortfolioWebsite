@@ -103,8 +103,8 @@ const ProjectCard = (props) => {
                     {console.log(projectData)}
                     <ProjectResponsibilitiesContainer>
                         {/* Top Heading  */}
-                        <div style = {{'display':'flex', 'justify-content':'space-between'}}>
-                            <h3 style = {{'font-size': '4rem', 'margin-bottom':'10px'}}>
+                        <div style = {{'display':'flex', 'justifyContent':'space-between'}}>
+                            <h3 style = {{'fontSize': '4rem', 'marginBottom':'10px'}}>
                                 Responsibilities
                             </h3>
                             <div onClick = {() => toggleCardView()}> 
@@ -116,7 +116,7 @@ const ProjectCard = (props) => {
                             <ul>
                                 {projectData.responsibilities.map(responsibility => {
                                     return (
-                                        <li style = {{'margin-bottom':'10px'}}>{responsibility}</li>
+                                        <li style = {{'marginBottom':'10px'}}>{responsibility}</li>
                                     )
                                 })}
                             </ul>
@@ -125,7 +125,7 @@ const ProjectCard = (props) => {
                     
                     <ProjectTechStackContainer>
                         {/* Top Heading  */}
-                        <h3 style = {{'font-size': '4rem', 'margin-bottom':'10px'}}>
+                        <h3 style = {{'fontSize': '4rem', 'marginBottom':'10px'}}>
                             Tech Stack
                         </h3>
                         {/* Tech Stack List  */}
@@ -143,7 +143,7 @@ const ProjectCard = (props) => {
 
                     <ProjectLinksContainer>
                         {/* Top Heading  */}
-                        <h3 style = {{'font-size': '4rem', 'margin-bottom':'10px'}}>
+                        <h3 style = {{'fontSize': '4rem', 'marginBottom':'10px'}}>
                             Links
                         </h3>
                         {/* Links List  */}
