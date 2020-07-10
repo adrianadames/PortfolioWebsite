@@ -280,7 +280,11 @@ function Home() {
             <HomeInnerContainer>
                 
                 <Header>
-                    <MainHeadlineH2>Adrian Adames</MainHeadlineH2>
+                    <MainHeadlineH2>
+                        <a href = "/" style = {{color:'rgba(252, 255, 252, 0.5)', textDecoration:'none'}}>
+                        Adrian Adames
+                        </a>
+                    </MainHeadlineH2>
                     <Nav>
                         <NavItem href = "/">HOME</NavItem>
                         <NavItem onClick = {() => scrollProjectsIntoView()}>PROJECTS</NavItem>
