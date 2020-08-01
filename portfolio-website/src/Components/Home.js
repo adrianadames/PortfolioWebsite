@@ -72,11 +72,11 @@ const NavItem = styled.a`
 `;
 
 const BurgerDiv= styled.nav`
-    display:none;
+    // display:none;
     height:100px;
     width:100px;
     // border:5px solid red;
-    // background-color:pink;
+    background-color:pink;
 
     @media(max-width:550px) {
         display: block;
