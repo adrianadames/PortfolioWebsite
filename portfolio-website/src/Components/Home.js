@@ -173,7 +173,7 @@ const SkillsSection = styled.section`
 
 const AboutSection = styled.section`
     width:100%;
-    border: 6px solid purple;
+    // border: 6px solid purple;
     @media(max-width:500px) {
         min-height:300px;
     }
@@ -273,12 +273,7 @@ const ProjectsContainerDiv = styled.div`
 `;
 
 const AboutContentDiv = styled.div`
-    border:4px solid lightgreen;
-    display:flex;
-    // justify-content:space-evenly;
-    // flex-wrap:wrap;
-    flex-direction:column;
-    align-items:center;
+    // border:4px solid lightgreen;
 `;
 
 
@@ -435,16 +430,9 @@ function Home() {
                     <AboutSection className = 'aboutHeading'>
                         <MainHeadlineH2>ABOUT</MainHeadlineH2>
                         <AboutContentDiv>
-                        <div style = {{marginTop:'50px', gridColumn: '1 / 2', gridRow: '3 / 4'}}>
-                            To include in about page: 
-                            <ul>
-                                <li>Professional profile picture</li>
-                                <li>Full Name</li>
-                                <li>Contact Info</li>
-                                <li>Links to all other artifacts</li>
-                                <li>Personal Mission statement: brief overview of what they do and why</li>
-                            </ul>
-                        </div>
+                            <div style = {{}}>
+                                Talk about my background, my personality, values, and motivations, and my hobbies/interests.
+                            </div>
                         </AboutContentDiv>
                         
                     </AboutSection>
