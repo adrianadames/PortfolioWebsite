@@ -159,7 +159,7 @@ const ProjectSection = styled.section`
 
 const SkillsSection = styled.section`
     width:100%;
-    font-size:2.2rem;
+    font-size:2.6rem;
     line-height: 1.1;
     // border: 6px solid purple;
     // height: 100vh;
@@ -273,7 +273,13 @@ const ProjectsContainerDiv = styled.div`
 `;
 
 const AboutContentDiv = styled.div`
-    // border:4px solid lightgreen;
+    font-size:2.2rem;
+    // width:72%; 
+    line-height:1.2;
+
+    @media(max-width:550px) {
+        // width:95%;
+    }
 `;
 
 
@@ -415,24 +421,44 @@ function Home() {
                             <li>Javascript</li>
                             <li>Python</li>
                             <li>React</li>
+                            <li>Redux</li>
                             <li>Node.js/Express</li>
                             <li>Django</li>
-                            <li>Redux</li>
-                            <li>Axios</li>
                             <li>PostgreSQL</li>
                             <li>SQLite3</li>
                             <li>Knex.js</li>
+                            <li>Axios</li>
+                            <li>Redux Thunk</li>
                             <li>Styled Components</li>
+                            <li>LESS</li>
                             <li>Bootstrap</li>
                             <li>Semantic UI</li>
                         </ul>
                     </SkillsSection>
                     <AboutSection className = 'aboutHeading'>
                         <MainHeadlineH2>ABOUT</MainHeadlineH2>
-                        <AboutContentDiv>
-                            <div style = {{}}>
-                                Talk about my background, my personality, values, and motivations, and my hobbies/interests.
-                            </div>
+                        <AboutContentDiv>                            
+                            <p>
+                            My name is Adrian Adames, and I’m a web developer based in Boston, MA. 
+                            Originally a mechanical engineer, I decided to pursue web development 
+                            shortly after completing my master’s degree in mechanical engineering 
+                            when the opportunity to learn how to code presented itself in the form 
+                            of Lambda School - a 9 month computer science and software engineering 
+                            academy providing an immersive hands-on curriculum with a focus on full 
+                            stack web development. Software development was something I had always 
+                            wanted to pursue, and the timing felt right so I jumped on the opportunity. 
+                            </p>
+                            <br></br>
+                            <p>
+                            Outside of software development and mechanical engineering, I have a wide 
+                            range of hobbies and interests. One is playing basketball and doing all 
+                            the health and fitness stuff required to play at a decent level. I also 
+                            love watching basketball in its highest form in the NBA playoffs. I’m 
+                            slowly but surely getting back into skateboarding and am currently working 
+                            on being able to consistently ollie while moving. I’m a big hip-hop fan 
+                            and hope to one day put all of my listening to use by learning how to DJ. 
+                            I also do a decent amount of reading (mostly non-fiction). I can go on and on. 
+                            </p>
                         </AboutContentDiv>
                         
                     </AboutSection>
