@@ -387,7 +387,7 @@ function Home() {
                                             </clipPath>
                                         </defs>
                                         <foreignObject width="100" height="100">
-                                            <a href = 'https://www.linkedin.com/in/adrianadames'>
+                                            <a href = 'https://drive.google.com/file/d/1tiu6zBUMvjApGU9cU1xG0jKNGj7SuBSl/view?usp=sharing'>
                                                 <div style={{width:'100%', height:'100%'}}></div>
                                             </a>
                                         </foreignObject>
