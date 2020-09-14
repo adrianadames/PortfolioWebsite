@@ -440,7 +440,7 @@ function Home() {
                         <AboutContentDiv>                            
                             <p>
                             My name is Adrian Adames, and I’m a web developer based in Boston, MA. 
-                            Originally a mechanical engineer, I decided to pursue web development 
+                            Trained as a mechanical engineer, I decided to pursue web development 
                             shortly after completing my master’s degree in mechanical engineering 
                             when the opportunity to learn how to code presented itself in the form 
                             of Lambda School - a 9 month computer science and software engineering 
@@ -453,11 +453,11 @@ function Home() {
                             Outside of software development and mechanical engineering, I have a wide 
                             range of hobbies and interests. One is playing basketball and doing all 
                             the health and fitness stuff required to play at a decent level. I also 
-                            love watching basketball in its highest form (NBA playoffs). I’m 
-                            slowly but surely getting back into skateboarding and am currently working 
-                            on being able to consistently ollie while moving. I’m a big hip-hop fan 
+                            love watching basketball in its highest form (NBA playoffs). I’m a big hip-hop fan 
                             and hope to one day put all of my listening to use by learning how to DJ. 
-                            I also do a decent amount of reading (mostly non-fiction).  
+                            I also do a decent amount of reading (mostly non-fiction). Lastly, 
+                            I’m slowly but surely getting back into skateboarding and am currently working 
+                            on being able to consistently ollie while moving. 
                             </p>
                         </AboutContentDiv>
                         
