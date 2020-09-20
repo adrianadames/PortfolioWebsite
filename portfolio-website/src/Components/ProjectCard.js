@@ -11,12 +11,14 @@ const ProjectCardContainer = styled.div`
     // height:700px;
     font-size:2.2rem;
     line-height: 1.1;
+    position:relative;
 `;
 
 const ProjectOverviewContainer = styled.div`
     // border:6px solid red;
     display:flex;
     flex-direction:column;
+    position:relative;
 `;
 
 const ProjectDetailsContainer = styled.div`
@@ -24,6 +26,11 @@ const ProjectDetailsContainer = styled.div`
     display:flex;
     flex-direction:column;
 `;
+
+const ProjectImageContainerDiv = styled.div`
+    width:100%;
+`;
+
 
 const ProjectImg = styled.img`
     width:100%;
@@ -47,12 +54,10 @@ const ProjectDescriptionContainer = styled.div`
 `;
 
 const ProjectResponsibilitiesContainer = styled.div`
-    
     // border:2px solid red;
     display:flex;
     flex-direction:column;
     margin-bottom:15px;
-     
 `;
 
 
@@ -63,6 +68,14 @@ const ProjectTechStackContainer = styled.div`
 
 const ProjectLinksContainer = styled.div`
     // border:2px solid pink;
+`;
+
+const ProjectToolTip = styled.div`
+    position:absolute;
+    bottom:140px;
+    left:0px;
+    background-color: lightgray;
+    color:#040F0F;
 `;
 
 
@@ -78,14 +91,34 @@ const ProjectCard = (props) => {
     const [projectDetailsView, setProjectDetailsView] = useState(false);
     const toggleCardView = () => {setProjectDetailsView(!projectDetailsView)};
 
+    const [active, setActive] = useState(false);
+    const showTip = () => {
+        setActive(true);
+    };
+    const hideTip = () => {
+        setActive(false);
+    };
+
     return ( 
         <ProjectCardContainer>
             {!projectDetailsView 
                 ? 
-                <ProjectOverviewContainer onClick = {() => toggleCardView()}>
-                    {console.log(projectData)}
+                <ProjectOverviewContainer 
+                    onMouseEnter = {showTip}
+                    onMouseLeave = {hideTip}
+                    onClick = {() => toggleCardView()}
+                >
+                    {/* {console.log(projectData)} */}
+                    <ProjectImageContainerDiv>
+                        <ProjectImg src = {projectData.url} onClick = {() => toggleCardView()} />
+                        {active &&
+                        <ProjectToolTip>
+                            Click card for more details
+                        </ProjectToolTip>
+                        }
+                    </ProjectImageContainerDiv>
                     
-                    <ProjectImg src = {projectData.url} onClick = {() => toggleCardView()} />
+                    
                     <ProjectTitleContainer>
                         <div> {projectData.title} </div>
                         <div onClick = {() => toggleCardView()}> 
@@ -97,10 +130,13 @@ const ProjectCard = (props) => {
                         {projectData.description}
                     </ProjectDescriptionContainer>
 
+                    
+                    
+
                 </ProjectOverviewContainer>
                 :
                 <ProjectDetailsContainer onClick = {() => toggleCardView()}>
-                    {console.log(projectData)}
+                    {/* {console.log(projectData)} */}
                     <ProjectResponsibilitiesContainer>
                         {/* Top Heading  */}
                         <div style = {{'display':'flex', 'justifyContent':'space-between'}}>
