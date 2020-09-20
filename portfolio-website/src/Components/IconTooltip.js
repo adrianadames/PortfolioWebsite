@@ -25,6 +25,8 @@ const IconTooltip = (props) => {
         <IconTooltipWrapperDiv
             onMouseEnter = {showTip}
             onMouseLeave = {hideTip}
+            onTouchStart = {showTip}
+            onTouchEnd = {hideTip}
         >
             {props.children}
             {active && (
