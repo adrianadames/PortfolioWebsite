@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import projectsData from '../projectsData';
 import ProjectCard from './ProjectCard';
@@ -36,19 +36,34 @@ const Header = styled.header`
     justify-content:space-between;
     align-items:center;
     width:100%;
-    height:100px;
+    // height:100%;
     z-index: 1;
     // border: 5px solid fuchsia;
+    margin-top:20px;
     
     @media(max-width:1000px) {
         flex-direction:column;
-        margin-top:20px;
     }
 
     @media(max-width:550px) {
-        flex-direction:row;
+        // flex-direction:row;
     }
 `;
+
+const HeaderLogoContainerDiv = styled.div`
+    font-size:4.8rem;
+    // border:1px solid red;
+
+    @media(max-width:1000px) {
+        margin-bottom: 20px;
+    }
+
+    @media(max-width:550px) {
+        font-size:3.8rem;
+        margin-bottom: 0px;
+    }
+`;
+
 
 const Nav = styled.nav`
     display:flex;
@@ -64,25 +79,54 @@ const Nav = styled.nav`
     }
 `;
 
+const MobileNav = styled.nav`
+    display:none;   
+
+    @media(max-width:550px) {
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        align-items:flex-end;
+        width:100%;
+        font-size:2.4rem;
+        font-weight: 200;
+        // border: 5px solid green;
+        // position:absolute;
+        // top:7.2rem;
+    }
+`;
+
 const NavItem = styled.a`
     color:rgba(252, 255, 252, 0.5);
     text-decoration:none;
     &:hover {
         font-weight:300;
     }
+    // border:1px solid yellow;
+
+    @media(max-width:550px) {
+        padding:7px;
+    }
 `;
 
-const BurgerDiv= styled.nav`
-    // display:none;
-    height:100px;
-    width:100px;
-    // border:5px solid red;
-    
+const BurgerDiv= styled.div`
+    display:none;
 
     @media(max-width:550px) {
         display: block;
-        background-color:pink;
+        height:4rem;
+        width:10%;
+        // border:2px solid orange;
+        // background-color:pink;
     }
+`;
+
+const BurgerSVGContainerDiv = styled.div`
+    width:100%;
+    height:100%;
+    // border:2px solid blue;
+    // position:absolute;
+    // top:0px;
 `;
 
 const Main = styled.main`
@@ -201,8 +245,7 @@ const MainHeadlineH1 = styled.h1`
 const MainHeadlineH2 = styled.h2`
     font-size:4.8rem;
     margin-bottom: 20px;
-
-    
+    // border:1px solid red;
 
     @media(max-width:550px) {
         font-size:3.8rem;
@@ -292,6 +335,11 @@ const AboutContentDiv = styled.div`
 
 
 function Home() {
+    const [burgerOpen, setBurgerOpen] = useState(false);
+
+    const toggleBurger = () => {
+        setBurgerOpen(!burgerOpen);
+    };
 
     const scrollProjectsIntoView = () => {
         const projectsAnchor = document.querySelector('.projectsHeading');
@@ -313,19 +361,36 @@ function Home() {
             <HomeInnerContainer>
                 
                 <Header>
-                    <MainHeadlineH2>
+                    <div style = {{display:'flex', justifyContent:'space-between', alignItems:'flex-start'}}>
+                    <HeaderLogoContainerDiv>
                         <a href = "/" style = {{color:'rgba(252, 255, 252, 0.5)', textDecoration:'none'}}>
                             Adrian Adames
-                        </a>
-                    </MainHeadlineH2>
+                        </a>   
+                    </HeaderLogoContainerDiv>
+                    <BurgerDiv onClick = {toggleBurger}>
+                        <BurgerSVGContainerDiv>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" ><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" fill = "rgba(252, 255, 252, 0.5)"/></svg>
+                        </BurgerSVGContainerDiv>
+                    </BurgerDiv>
+                    </div>
+                    {burgerOpen &&
+                        <MobileNav>
+                            {/* <NavItem href = "/">HOME</NavItem> */}
+                            <NavItem onClick = {() => scrollProjectsIntoView()}>PROJECTS</NavItem>
+                            <NavItem onClick = {() => scrollSkillsIntoView()}>SKILLS</NavItem>
+                            <NavItem onClick = {() => scrollAboutIntoView()}>ABOUT</NavItem>
+                        </MobileNav>
+                    }
                     <Nav>
                         <NavItem href = "/">HOME</NavItem>
                         <NavItem onClick = {() => scrollProjectsIntoView()}>PROJECTS</NavItem>
                         <NavItem onClick = {() => scrollSkillsIntoView()}>SKILLS</NavItem>
                         <NavItem onClick = {() => scrollAboutIntoView()}>ABOUT</NavItem>
                     </Nav>
-                    <BurgerDiv></BurgerDiv>
+                    
+                    
                 </Header>
+                
                 <Main>
                     <LandingSection>
                         <LandingImg src = '/images/devHeadshotBWCropped2.jpg'  />

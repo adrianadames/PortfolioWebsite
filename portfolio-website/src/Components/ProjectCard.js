@@ -29,6 +29,7 @@ const ProjectDetailsContainer = styled.div`
 
 const ProjectImageContainerDiv = styled.div`
     width:100%;
+    position:relative;
 `;
 
 
@@ -72,7 +73,7 @@ const ProjectLinksContainer = styled.div`
 
 const ProjectToolTip = styled.div`
     position:absolute;
-    bottom:140px;
+    bottom:0px;
     left:0px;
     background-color: lightgray;
     color:#040F0F;
@@ -106,6 +107,8 @@ const ProjectCard = (props) => {
                 <ProjectOverviewContainer 
                     onMouseEnter = {showTip}
                     onMouseLeave = {hideTip}
+                    onTouchStart = {showTip}
+                    onTouchEnd = {hideTip}
                     onClick = {() => toggleCardView()}
                 >
                     {/* {console.log(projectData)} */}
