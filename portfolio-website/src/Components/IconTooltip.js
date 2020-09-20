@@ -6,7 +6,7 @@ const IconTooltipWrapperDiv = styled.div`
     position:relative;
 `;
 
-const IconToolTipContent = styled.div`
+const IconTooltipContent = styled.div`
     position:absolute;
     bottom:-20px;
     left:0px;
@@ -28,9 +28,9 @@ const IconTooltip = (props) => {
         >
             {props.children}
             {active && (
-                <IconToolTipContent>
+                <IconTooltipContent>
                     {props.content}
-                </IconToolTipContent>
+                </IconTooltipContent>
             )}
         </IconTooltipWrapperDiv>
     )
