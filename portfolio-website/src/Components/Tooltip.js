@@ -1,11 +1,40 @@
 import React, {useState} from 'react';
+import styled from 'styled-components';
+
+const TooltipDiv = styled.div`
+    display:relative;
+    width:100%;
+    // height:100%;
+    color:'white';
+    z-index:100;
+    // border: 2px solid orange;
+    bottom:500px;
+`;
+
+const ToolTipContent = styled.div`
+    border:1px solid red;
+`;
 
 const Tooltip = (props) => {
-
+    const [active, setActive] = useState(false);
+    const showTip = () => {
+        setActive(true);
+    };
+    const hideTip = () => {
+        setActive(false);
+    };
     return (
-        <div>
-            
-        </div>
+        <TooltipDiv
+            onMouseEnter = {showTip}
+            onMouseLeave = {hideTip}
+        >
+            {props.children}
+            {active && (
+                <ToolTipContent>
+                    {props.content}
+                </ToolTipContent>
+            )}
+        </TooltipDiv>
     )
 }; 
 
