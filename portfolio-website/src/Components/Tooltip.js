@@ -4,15 +4,19 @@ import styled from 'styled-components';
 const TooltipDiv = styled.div`
     display:relative;
     width:100%;
-    // height:100%;
+    height:100%;
     color:'white';
     z-index:100;
-    // border: 2px solid orange;
-    bottom:500px;
+    // border: 1px solid orange;
+    bottom:500px; 
 `;
 
 const ToolTipContent = styled.div`
     border:1px solid red;
+    display:absolute;
+    top:-200px;
+    left:300px;
+    z-index:100;
 `;
 
 const Tooltip = (props) => {
