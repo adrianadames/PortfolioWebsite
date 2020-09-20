@@ -457,7 +457,6 @@ function Home() {
                             <li>SQLite3</li>
                             <li>Knex.js</li>
                             <li>Axios</li>
-                            <li>Redux Thunk</li>
                             <li>Styled Components</li>
                             <li>LESS</li>
                             <li>Bootstrap</li>
@@ -472,7 +471,7 @@ function Home() {
                             Trained as a mechanical engineer, I decided to pursue web development 
                             shortly after completing my master’s degree in mechanical engineering 
                             when the opportunity to learn how to code presented itself in the form 
-                            of Lambda School - a 9 month computer science and software engineering 
+                            of Lambda School - a computer science and software engineering 
                             academy providing an immersive hands-on curriculum with a focus on full 
                             stack web development. Software development was something I had always 
                             wanted to pursue, and the timing felt right so I jumped on the opportunity. 
