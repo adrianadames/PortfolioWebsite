@@ -1,25 +1,19 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
-const TooltipDiv = styled.div`
-    display:relative;
-    width:100%;
-    height:100%;
-    color:'white';
-    z-index:100;
-    // border: 1px solid orange;
-    bottom:500px; 
+const IconTooltipWrapperDiv = styled.div`
+    width:15%;
+    position:relative;
 `;
 
-const ToolTipContent = styled.div`
-    border:1px solid red;
-    display:absolute;
-    top:-200px;
-    left:300px;
-    z-index:100;
+const IconToolTipContent = styled.div`
+    position:absolute;
+    bottom:-20px;
+    left:0px;
+    color:#E5E5E5;
 `;
 
-const Tooltip = (props) => {
+const IconTooltip = (props) => {
     const [active, setActive] = useState(false);
     const showTip = () => {
         setActive(true);
@@ -28,18 +22,18 @@ const Tooltip = (props) => {
         setActive(false);
     };
     return (
-        <TooltipDiv
+        <IconTooltipWrapperDiv
             onMouseEnter = {showTip}
             onMouseLeave = {hideTip}
         >
             {props.children}
             {active && (
-                <ToolTipContent>
+                <IconToolTipContent>
                     {props.content}
-                </ToolTipContent>
+                </IconToolTipContent>
             )}
-        </TooltipDiv>
+        </IconTooltipWrapperDiv>
     )
 }; 
 
-export default Tooltip; 
+export default IconTooltip; 
