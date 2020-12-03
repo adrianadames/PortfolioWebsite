@@ -326,7 +326,7 @@ const ProjectsContainerDiv = styled.div`
 const AboutContentDiv = styled.div`
     font-size:2.2rem;
     // width:72%; 
-    line-height:1.2;
+    line-height:1.3;
 
     @media(max-width:550px) {
         // width:95%;
@@ -533,12 +533,10 @@ function Home() {
                         <AboutContentDiv>                            
                             <p>
                             My name is Adrian Adames, and I’m a web developer based in Boston, MA. 
-                            Trained as a mechanical engineer, I decided to pursue web development 
-                            shortly after completing my master’s degree in mechanical engineering 
+                            Trained as a mechanical engineer, I decided to pursue web development  
                             when the opportunity to learn how to code presented itself in the form 
                             of Lambda School - a computer science and software engineering 
-                            academy providing an immersive hands-on curriculum with a focus on full 
-                            stack web development. Software development was something I had always 
+                            academy. Software development was something I had always 
                             wanted to pursue, and the timing felt right so I jumped on the opportunity. 
                             </p>
                             <br></br>
