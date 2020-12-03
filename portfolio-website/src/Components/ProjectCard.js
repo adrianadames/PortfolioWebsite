@@ -77,6 +77,7 @@ const ProjectToolTip = styled.div`
     left:0px;
     background-color: lightgray;
     color:#040F0F;
+    font-size:3.8rem;
 `;
 
 
