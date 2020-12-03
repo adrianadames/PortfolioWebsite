@@ -33,7 +33,7 @@ const projectsData = [
         description: 'Explore a multi-user dungeon world and chat with other users along the way.',
         techStack: ['React', 'Styled Components', 'Django', 'Pusher API'],
         link: 'https://adrian-mud-project.netlify.com',
-        github: ['https://github.com/adrianadames/LambdaMUD-Client', 'https://github.com/adrianadames/LambdaMUD-Project'],
+        github: ['https://github.com/adrianadames/MudTextAdventureFE', 'https://github.com/adrianadames/MudTextAdventureBE'],
         url:'/images/mud1.PNG', 
         responsibilities: [
             'Architected the component level structure of the app, and designed the look of the app to harken to the era of time when MUD text adventure games were popular.',
@@ -47,7 +47,7 @@ const projectsData = [
         description: 'Create, edit, and delete notes using a simple notes app.',
         techStack: ['React', 'Styled Components', 'Node.js/Express', 'Knex'],
         link: 'https://adrian-notes-project.netlify.com',
-        github: ['https://github.com/adrianadames/front-end-project-week', 'https://github.com/adrianadames/LambdaNotesBackend'],
+        github: ['https://github.com/adrianadames/SimpleNotesAppFE', 'https://github.com/adrianadames/SimpleNotesAppBE'],
         url:'/images/notes1.PNG',
         responsibilities: [
             'Architected the component level structure of the app, aiming for simplicity in the management and manipulation of state.',
