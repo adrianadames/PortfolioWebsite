@@ -36,8 +36,8 @@ const projectsData = [
         github: ['https://github.com/adrianadames/MudTextAdventureFE', 'https://github.com/adrianadames/MudTextAdventureBE'],
         url:'/images/mud1.PNG', 
         responsibilities: [
-            'Architected the component level structure of the app, and designed the look of the app to harken to the era of time when MUD text adventure games were popular.',
-            'Styled app according to the above-mentioned design spec via styled components.',
+            'Architected the component level structure of the app.',
+            'Designed and styled app to harken to era of time when MUD text adventure games were popular.',
             'Set up the backend logic for achieving realtime bi-directional chat via WebSockets via the Pusher API and the associated front-end logic to enable the user to chat.'
         ]
     }, 
