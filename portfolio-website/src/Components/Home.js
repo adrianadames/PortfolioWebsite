@@ -543,7 +543,7 @@ function Home() {
                             <p>
                             Outside of software development and mechanical engineering, I have a wide 
                             range of hobbies and interests. One is playing basketball and doing all 
-                            the health and fitness stuff required to play at a decent level. I also 
+                            the health and fitness upkeep required to play at a decent level. I also 
                             love watching basketball in its highest form (NBA playoffs). I’m a big hip-hop fan 
                             and hope to one day put all of my listening to use by learning how to DJ. 
                             I also do a decent amount of reading (mostly non-fiction). Lastly, 
