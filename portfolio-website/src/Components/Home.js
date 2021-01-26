@@ -514,6 +514,7 @@ function Home() {
                             <li>HTML/CSS</li>
                             <li>Javascript</li>
                             <li>Python</li>
+                            <li>MATLAB</li>
                             <li>React</li>
                             <li>Redux</li>
                             <li>Node.js/Express</li>
@@ -526,6 +527,7 @@ function Home() {
                             <li>LESS</li>
                             <li>Bootstrap</li>
                             <li>Semantic UI</li>
+                            <li>Figma</li>
                         </ul>
                     </SkillsSection>
                     <AboutSection className = 'aboutHeading'>
