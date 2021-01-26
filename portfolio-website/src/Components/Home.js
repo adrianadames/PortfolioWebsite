@@ -479,7 +479,7 @@ function Home() {
                                             </clipPath>
                                         </defs>
                                         <foreignObject width="100" height="100">
-                                            <a href = 'https://drive.google.com/file/d/16dBujTu1gr7l82idia3yWHwZ241vGO5T/view?usp=sharing'>
+                                            <a href = 'https://drive.google.com/file/d/1mvw5X4rAkVQajN-9Fbpf6-BocP19Lh6z/view?usp=sharing'>
                                                 <div style={{width:'100%', height:'100%'}}></div>
                                             </a>
                                         </foreignObject>
@@ -514,6 +514,7 @@ function Home() {
                             <li>HTML/CSS</li>
                             <li>Javascript</li>
                             <li>Python</li>
+                            <li>MATLAB</li>
                             <li>React</li>
                             <li>Redux</li>
                             <li>Node.js/Express</li>
@@ -526,6 +527,7 @@ function Home() {
                             <li>LESS</li>
                             <li>Bootstrap</li>
                             <li>Semantic UI</li>
+                            <li>Figma</li>
                         </ul>
                     </SkillsSection>
                     <AboutSection className = 'aboutHeading'>
