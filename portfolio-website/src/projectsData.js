@@ -1,18 +1,4 @@
 const projectsData = [
-    // {
-    //     id: 1,
-    //     title: 'Piktorlog Copy',
-    //     description: 'Organize and retrieve images in a way that works for you!',
-    //     techStack: ['React', 'Redux', 'Semantic UI', 'NodeJS/Express/Knex', 'PostgreSQL database via Heroku', 'Sentry', 'Travis CI', 'Cloudinary API', 'Figma', 'Mocha and Chai/Chai-http'],
-    //     link: 'https://piktorlogcopy.netlify.com/',
-    //     github: ['https://github.com/adrianadames/travel-mapping-fe','https://github.com/adrianadames/travel-mapping-be'], 
-    //     url:'/images/intercom1.PNG', 
-    //     responsibilities: [
-    //         'Set up the backend logic for adding money to user account using credit card and the backend logic that subtracts incurred charges from account balance.',
-    //         'Set up the frontend UI/UX for adding a credit card and adding money to user account.', 
-    //         'Designed and constructed the first iteration of our database and REST API architecture.'
-    //         ]
-    // },
     {
         id: 1,
         title: 'Voice Chatroom',
