@@ -1,4 +1,4 @@
 [build]
 base = "portfolio-website/"
 publish = "portfolio-website/build/"
-command = "CI=yarn build"
+command = "yarn build"
